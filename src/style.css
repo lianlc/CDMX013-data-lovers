@@ -1,0 +1,19 @@
+/*Estilos del Footer*/
+footer {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  align-items: center;
+}
+.footerStyleText {
+  padding-inline: 26px;
+  font-family: "Almarai", sans-serif;
+  color: #b7d8eb;
+  font-size: large;
+}
+#textSmallFooter {
+  font-size: 15px;
+}
