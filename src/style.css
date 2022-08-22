@@ -1,12 +1,42 @@
+/*Fondo*/
+body {
+  background-image: url(https://thumbs.gfycat.com/BriefIgnorantBlackbuck-size_restricted.gif);
+  }
+
+ /*Estilos del header*/
+ header {
+  right: 0%;
+  width: 100%;
+  background-color: black;
+  height: 100px;
+  position: fixed;
+   display: flex;
+   align-items:center;
+   justify-content: center;
+   top: 0%;
+  }
+   h1{
+    font-family: 'Creepster', cursive;
+    font-style: normal;
+    font-size: 55px;
+    text-align: center;
+    color: #B7D8EB;
+    }
+/*Estilo del main*/
+
 /*Estilo de iconos*/
-.icons {
+.icons { 
   width: 36px;
   height: 36px;
   position: fixed;
   right: 10px;
+}
+ #iconPlay{
   top: 50%;
 }
-
+#IconGithub{
+  top: 40%;
+}
 /*Estilos del Footer*/
 footer {
   background-color: black;
