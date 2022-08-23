@@ -23,6 +23,13 @@ body {
     color: #B7D8EB;
     }
 /*Estilo del main*/
+ .characterStyle {
+display: flex;
+flex-wrap: wrap;
+}
+
+
+
 
 /*Estilo de iconos*/
 .icons { 
