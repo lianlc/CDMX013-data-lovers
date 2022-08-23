@@ -5,6 +5,7 @@ const characters = allData.results;
 
 const generadorHTML =(results)=>{
 const div = document.createElement('div');
+div.classList= 'oneCharacter'
 
 const img= document.createElement ('img');
 img.setAttribute('src',results.image);
