@@ -91,7 +91,7 @@ footer {
   justify-content: space-between;
   bottom: 0;
   align-items: center;
-   height: 45px;
+  height: 45px;
 }
 .footerStyleText {
   padding-inline: 26px;
@@ -104,3 +104,4 @@ footer {
   font-size: 15px;
   margin-top: 15px;
 }
+
