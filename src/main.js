@@ -1,6 +1,11 @@
 import allData from "./data/rickandmorty/rickandmorty.js";
 import { filterAll } from "./data.js";
-//const Alive = document.getElementById("Alive");
+
+const Alive = document.getElementById("Alive");
+const Dead = document.getElementById("Dead");
+const Male = document.getElementById("Male");
+const Female = document.getElementById("Female");
+const Unknown = document.getElementById("Unknown");
 
 const root = document.getElementById("root");
 root.classList = "characterStyle";
@@ -27,41 +32,38 @@ characters.forEach((oneCharacter) =>
   root.appendChild(generadorHTML(oneCharacter))
 );
 //Ejecuta la opcion de filtrado//
-Alive.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const aliveFilter = filterAll ("status","Alive")
+Alive.addEventListener("click", () => {
+  root.innerHTML = "";
+  const aliveFilter = filterAll("status", "Alive");
   aliveFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Dead.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const deadFilter = filterAll ("status","Dead")
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Dead.addEventListener("click", () => {
+  root.innerHTML = "";
+  const deadFilter = filterAll("status", "Dead");
   deadFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Male.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const maleFilter = filterAll ("gender","Male")
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Male.addEventListener("click", () => {
+  root.innerHTML = "";
+  const maleFilter = filterAll("gender", "Male");
   maleFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Female.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const femaleFilter = filterAll ("gender","Female")
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Female.addEventListener("click", () => {
+  root.innerHTML = "";
+  const femaleFilter = filterAll("gender", "Female");
   femaleFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Unknown.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const unknownFilter = filterAll ("gender","unknown")
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Unknown.addEventListener("click", () => {
+  root.innerHTML = "";
+  const unknownFilter = filterAll("gender", "unknown");
   unknownFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-
-
-
-
-
-
-
-
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});

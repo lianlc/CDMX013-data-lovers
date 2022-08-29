@@ -7,7 +7,6 @@ function filterAll(key, parameter) {
 }
 export { filterAll };
 
-
 //export const example = () => {
 // return 'example';
 // };
