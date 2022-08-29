@@ -59,14 +59,12 @@ p {
   color: white;
   font-size: 15px;
 }
-h2,
-p {
+h2,p {
   display: flex;
   justify-content: center;
   margin-top: 0px;
 }
-h1,
-h2 {
+h1,h2 {
   font-family: "Creepster", cursive;
 }
 
@@ -90,7 +88,13 @@ h2 {
   top: 25%;
   left: 55px;
 }
-#sort {
+.filter {
+  position: fixed;
+  top: 40%;
+  left: 55px;
+}
+
+.sort {
   font-size: medium;
 }
 /*Estilos de Boton*/
