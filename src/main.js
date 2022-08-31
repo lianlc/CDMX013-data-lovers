@@ -45,7 +45,7 @@ All.addEventListener("click", () => {
 
 Alive.addEventListener("click", () => {
   root.innerHTML = "";
-  const aliveFilter = filterAll("status", "Alive");
+  const aliveFilter = filterAlive("status", "Alive");
   aliveFilter.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
