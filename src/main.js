@@ -1,6 +1,14 @@
 import allData from "./data/rickandmorty/rickandmorty.js";
-import { filterAll } from "./data.js";
-//const Alive = document.getElementById("Alive");
+import { filterAll, filterDead,filterAlive,sortAll} from "./data.js";
+
+const All = document.getElementById ("All");
+const Alive = document.getElementById("Alive");
+const Dead = document.getElementById("Dead");
+const Male = document.getElementById("Male");
+const Female = document.getElementById("Female");
+const Unknown = document.getElementById("Unknown");
+const sortA = document.getElementById("sortA");
+const sortZ = document.getElementById("sortZ");
 
 const root = document.getElementById("root");
 root.classList = "characterStyle";
@@ -27,15 +35,23 @@ characters.forEach((oneCharacter) =>
   root.appendChild(generadorHTML(oneCharacter))
 );
 //Ejecuta la opcion de filtrado//
+All.addEventListener ("click", ()=>{
+root.innerHTML= ""
+const characters = allData.results;
+characters.forEach((oneCharacter) =>
+root.appendChild(generadorHTML(oneCharacter))
+);
+})
+
 Alive.addEventListener ("click",()=>{
   root.innerHTML= ""
-  const aliveFilter = filterAll ("status","Alive")
+  const aliveFilter = filterAlive ("status","Alive")
   aliveFilter.forEach((oneCharacter) =>
   root.appendChild(generadorHTML(oneCharacter)))
 })
 Dead.addEventListener ("click",()=>{
   root.innerHTML= ""
-  const deadFilter = filterAll ("status","Dead")
+  const deadFilter = filterDead()
   deadFilter.forEach((oneCharacter) =>
   root.appendChild(generadorHTML(oneCharacter)))
 })
@@ -58,9 +74,19 @@ Unknown.addEventListener ("click",()=>{
   root.appendChild(generadorHTML(oneCharacter)))
 })
 
+sortA.addEventListener ("click", ()=>{
+root.innerHTML= ""
+const sorted = sortAll (true);
+sorted.forEach((oneCharacter) =>
+root.appendChild(generadorHTML(oneCharacter)))
+})
 
-
-
+ sortZ.addEventListener ("click", ()=>{
+ root.innerHTML= ""
+ const sorted = sortAll (false);
+ sorted.forEach((oneCharacter) =>
+ root.appendChild(generadorHTML(oneCharacter)))
+  })
 
 
 
