@@ -1,5 +1,5 @@
 import allData from "./data/rickandmorty/rickandmorty.js";
-import { filterAll, sortAll } from "./data.js";
+import { filterAll, filterDead, filterAlive, sortAll } from "./data.js";
 
 const All = document.getElementById("All");
 const Alive = document.getElementById("Alive");
@@ -52,7 +52,7 @@ Alive.addEventListener("click", () => {
 });
 Dead.addEventListener("click", () => {
   root.innerHTML = "";
-  const deadFilter = filterAll("status", "Dead");
+  const deadFilter = filterDead();
   deadFilter.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
@@ -86,7 +86,6 @@ sortA.addEventListener("click", () => {
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
-
 sortZ.addEventListener("click", () => {
   root.innerHTML = "";
   const sorted = sortAll(false);
