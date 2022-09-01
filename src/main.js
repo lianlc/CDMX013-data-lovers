@@ -1,7 +1,7 @@
 import allData from "./data/rickandmorty/rickandmorty.js";
-import { filterAll, filterDead,filterAlive,sortAll} from "./data.js";
+import { filterAll, filterDead, filterAlive, sortAll } from "./data.js";
 
-const All = document.getElementById ("All");
+const All = document.getElementById("All");
 const Alive = document.getElementById("Alive");
 const Dead = document.getElementById("Dead");
 const Male = document.getElementById("Male");
@@ -35,59 +35,61 @@ characters.forEach((oneCharacter) =>
   root.appendChild(generadorHTML(oneCharacter))
 );
 //Ejecuta la opcion de filtrado//
-All.addEventListener ("click", ()=>{
-root.innerHTML= ""
-const characters = allData.results;
-characters.forEach((oneCharacter) =>
-root.appendChild(generadorHTML(oneCharacter))
-);
-})
+All.addEventListener("click", () => {
+  root.innerHTML = "";
+  const characters = allData.results;
+  characters.forEach((oneCharacter) =>
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
 
-Alive.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const aliveFilter = filterAlive ("status","Alive")
+Alive.addEventListener("click", () => {
+  root.innerHTML = "";
+  const aliveFilter = filterAlive("status", "Alive");
   aliveFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Dead.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const deadFilter = filterDead()
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Dead.addEventListener("click", () => {
+  root.innerHTML = "";
+  const deadFilter = filterDead();
   deadFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Male.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const maleFilter = filterAll ("gender","Male")
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Male.addEventListener("click", () => {
+  root.innerHTML = "";
+  const maleFilter = filterAll("gender", "Male", characters);
   maleFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Female.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const femaleFilter = filterAll ("gender","Female")
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Female.addEventListener("click", () => {
+  root.innerHTML = "";
+  const femaleFilter = filterAll("gender", "Female", characters);
   femaleFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-Unknown.addEventListener ("click",()=>{
-  root.innerHTML= ""
-  const unknownFilter = filterAll ("gender","unknown")
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Unknown.addEventListener("click", () => {
+  root.innerHTML = "";
+  const unknownFilter = filterAll("gender", "unknown", characters);
   unknownFilter.forEach((oneCharacter) =>
-  root.appendChild(generadorHTML(oneCharacter)))
-})
-
-sortA.addEventListener ("click", ()=>{
-root.innerHTML= ""
-const sorted = sortAll (true);
-sorted.forEach((oneCharacter) =>
-root.appendChild(generadorHTML(oneCharacter)))
-})
-
- sortZ.addEventListener ("click", ()=>{
- root.innerHTML= ""
- const sorted = sortAll (false);
- sorted.forEach((oneCharacter) =>
- root.appendChild(generadorHTML(oneCharacter)))
-  })
-
-
-
-
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+//Ejecuta la opcion de ordenamienti//
+sortA.addEventListener("click", () => {
+  root.innerHTML = "";
+  const sorted = sortAll(true);
+  sorted.forEach((oneCharacter) =>
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+sortZ.addEventListener("click", () => {
+  root.innerHTML = "";
+  const sorted = sortAll(false);
+  sorted.forEach((oneCharacter) =>
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
