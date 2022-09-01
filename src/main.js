@@ -81,7 +81,7 @@ sorted.forEach((oneCharacter) =>
 root.appendChild(generadorHTML(oneCharacter)))
 })
 
- sortZ.addEventListener ("click", ()=>{
+sortZ.addEventListener ("click", ()=>{
  root.innerHTML= ""
  const sorted = sortAll (false);
  sorted.forEach((oneCharacter) =>

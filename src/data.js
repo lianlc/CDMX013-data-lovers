@@ -22,7 +22,6 @@ else{return Z.name.localeCompare(A.name);
 }); 
 return charactersCopy
 }
-
 export { filterAll, filterDead, filterAlive,sortAll };
 
 
