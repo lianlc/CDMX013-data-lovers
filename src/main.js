@@ -59,21 +59,21 @@ Dead.addEventListener("click", () => {
 });
 Male.addEventListener("click", () => {
   root.innerHTML = "";
-  const maleFilter = filterAll("gender", "Male");
+  const maleFilter = filterAll("gender", "Male", characters);
   maleFilter.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
 Female.addEventListener("click", () => {
   root.innerHTML = "";
-  const femaleFilter = filterAll("gender", "Female");
+  const femaleFilter = filterAll("gender", "Female", characters);
   femaleFilter.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
 Unknown.addEventListener("click", () => {
   root.innerHTML = "";
-  const unknownFilter = filterAll("gender", "unknown");
+  const unknownFilter = filterAll("gender", "unknown", characters);
   unknownFilter.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
