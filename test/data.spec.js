@@ -1,4 +1,4 @@
-import { filterAll } from "../src/data.js";
+import { filterAll, sortAll } from "../src/data.js";
 
 const people = [
   {
