@@ -9,6 +9,7 @@ const Female = document.getElementById("Female");
 const Unknown = document.getElementById("Unknown");
 const sortA = document.getElementById("sortA");
 const sortZ = document.getElementById("sortZ");
+const Logo = document.getElementById("Logo");
 
 const root = document.getElementById("root");
 root.classList = "characterStyle";
@@ -90,6 +91,13 @@ sortZ.addEventListener("click", () => {
   root.innerHTML = "";
   const sorted = sortAll(false, characters);
   sorted.forEach((oneCharacter) =>
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Logo.addEventListener("click", () => {
+  root.innerHTML = "";
+  const characters = allData.results;
+  characters.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
