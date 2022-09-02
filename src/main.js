@@ -81,14 +81,14 @@ Unknown.addEventListener("click", () => {
 //Ejecuta la opcion de ordenamienti//
 sortA.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(true);
+  const sorted = sortAll(true, characters);
   sorted.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
 sortZ.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(false);
+  const sorted = sortAll(false, characters);
   sorted.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );

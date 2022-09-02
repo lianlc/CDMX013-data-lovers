@@ -11,8 +11,8 @@ function filterDead() {
 function filterAlive() {
   return characters.filter((character) => character.status === "Alive");
 }
-function sortAll(order) {
-  const charactersCopy = [...characters];
+function sortAll(order, data) {
+  const charactersCopy = [...data];
   charactersCopy.sort((A, Z) => {
     if (order) {
       return A.name.localeCompare(Z.name);
