@@ -15,10 +15,20 @@ header {
   justify-content: center;
   top: 0%;
 }
+#Logo{
+  height: 70px;
+  position: fixed;
+  left: 25px;
+  top: 4px;
+  margin: 0;
+  width: 70px;
+}
+
 h1 {
   font-style: normal;
   font-size: 45px;
-  text-align: center;
+  position: fixed;
+  left: 10%;
   color: #b7d8eb;
   -webkit-text-stroke: 0.7px #65a351;
 }
@@ -112,6 +122,13 @@ button {
 button:hover {
   color: #65a351;
   font-weight: bold;
+}
+#All {
+border-radius: 10px;
+box-shadow: 0 0 5px rgb(12, 189, 36);
+position:fixed;
+left: 70px;
+margin-top: 15px;
 }
 /*Estilos del Footer*/
 footer {
