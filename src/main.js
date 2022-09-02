@@ -9,6 +9,7 @@ const Female = document.getElementById("Female");
 const Unknown = document.getElementById("Unknown");
 const sortA = document.getElementById("sortA");
 const sortZ = document.getElementById("sortZ");
+const Logo = document.getElementById("Logo");
 
 const root = document.getElementById("root");
 root.classList = "characterStyle";
@@ -75,21 +76,28 @@ Unknown.addEventListener("click", () => {
   root.innerHTML = "";
   const unknownFilter = filterAll("gender", "unknown", characters);
   unknownFilter.forEach((oneCharacter) =>
-    root.appendChild(generadorHTML(oneCharacter))
-  );
+root.appendChild(generadorHTML(oneCharacter))
+);
 });
 //Ejecuta la opcion de ordenamienti//
 sortA.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(true);
+  const sorted = sortAll(true,characters);
   sorted.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
 sortZ.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(false);
+  const sorted = sortAll(false,characters);
   sorted.forEach((oneCharacter) =>
+    root.appendChild(generadorHTML(oneCharacter))
+  );
+});
+Logo.addEventListener("click", () => {
+  root.innerHTML = "";
+  const characters = allData.results;
+  characters.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
