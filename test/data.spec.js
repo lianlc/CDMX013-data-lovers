@@ -31,7 +31,7 @@ describe("Prueba unitaria de filtro", () => {
   });
 
   it("Retornar el arreglo de los personajes especificados", () => {
-    expect(filterAll("status", "Dead", people)).toBe(peopleDead);
+    expect(filterAll("status", "Dead", people)).toEqual(peopleDead);
   });
 });
 const nameData = [
