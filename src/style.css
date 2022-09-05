@@ -15,7 +15,7 @@ header {
   justify-content: center;
   top: 0%;
 }
-#Logo{
+#Logo {
   height: 70px;
   position: fixed;
   left: 25px;
@@ -33,7 +33,7 @@ h1 {
   -webkit-text-stroke: 0.7px #65a351;
 }
 /*Estilo del main*/
-input{
+input {
   background: transparent;
   border-radius: 15px;
   box-shadow: 0 0 5px rgb(12, 189, 36);
@@ -41,21 +41,21 @@ input{
   margin-right: 10px;
   height: 30px;
   width: 280px;
+  color: #65a351;
 }
-#searchSpace{
+#searchSpace {
   position: fixed;
   right: 50px;
   top: 20px;
 }
-#buttonSearch{
+#buttonSearch {
   background: transparent;
   border-radius: 10px;
   box-shadow: 0 0 4px rgb(12, 189, 36);
-  font-size:smaller;
+  font-size: smaller;
   font-family: "Creepster", cursive;
   color: #b7d8eb;
   -webkit-text-stroke: 0.7px #65a351;
-
 }
 .characterStyle {
   display: flex;
@@ -148,11 +148,11 @@ button:hover {
   font-weight: bold;
 }
 #All {
-border-radius: 10px;
-box-shadow: 0 0 5px rgb(12, 189, 36);
-position:fixed;
-left: 70px;
-margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(12, 189, 36);
+  position: fixed;
+  left: 70px;
+  margin-top: 15px;
 }
 /*Estilos del Footer*/
 footer {
