@@ -76,20 +76,20 @@ Unknown.addEventListener("click", () => {
   root.innerHTML = "";
   const unknownFilter = filterAll("gender", "unknown", characters);
   unknownFilter.forEach((oneCharacter) =>
-    root.appendChild(generadorHTML(oneCharacter))
-  );
+root.appendChild(generadorHTML(oneCharacter))
+);
 });
 //Ejecuta la opcion de ordenamienti//
 sortA.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(true, characters);
+  const sorted = sortAll(true,characters);
   sorted.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
 sortZ.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(false, characters);
+  const sorted = sortAll(false,characters);
   sorted.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );

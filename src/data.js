@@ -2,7 +2,10 @@
 import allData from "./data/rickandmorty/rickandmorty.js";
 const characters = allData.results;
 
+
+
 function filterAll(key, parameter, data) {
+
   return data.filter((character) => character[key] === parameter);
 }
 function filterDead() {
