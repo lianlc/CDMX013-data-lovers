@@ -42,12 +42,13 @@ input {
   height: 30px;
   width: 280px;
   color: #65a351;
+  padding-left:10px;
 }
 #searchSpace {
   position: fixed;
   right: 50px;
   top: 20px;
-}
+ }
 #buttonSearch {
   background: transparent;
   border-radius: 10px;

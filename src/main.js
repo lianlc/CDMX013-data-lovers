@@ -10,6 +10,10 @@ const Unknown = document.getElementById("Unknown");
 const sortA = document.getElementById("sortA");
 const sortZ = document.getElementById("sortZ");
 const Logo = document.getElementById("Logo");
+const buttonSearch = document.getElementById("buttonSearch");
+
+const parameterUser = document.getElementById("searchCharacter")
+console.log(parameterUser.value)
 
 const root = document.getElementById("root");
 root.classList = "characterStyle";
@@ -35,7 +39,7 @@ const generadorHTML = (results) => {
 characters.forEach((oneCharacter) =>
   root.appendChild(generadorHTML(oneCharacter))
 );
-//Ejecuta la opcion de filtrado//
+//Esto sirve para limpiar los filtros//
 All.addEventListener("click", () => {
   root.innerHTML = "";
   const characters = allData.results;
@@ -43,7 +47,7 @@ All.addEventListener("click", () => {
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
-
+//Ejecuta la opcion de filtrado//
 Alive.addEventListener("click", () => {
   root.innerHTML = "";
   const aliveFilter = filterAlive("status", "Alive");
@@ -76,20 +80,28 @@ Unknown.addEventListener("click", () => {
   root.innerHTML = "";
   const unknownFilter = filterAll("gender", "unknown", characters);
   unknownFilter.forEach((oneCharacter) =>
-    root.appendChild(generadorHTML(oneCharacter))
-  );
+root.appendChild(generadorHTML(oneCharacter))
+);
 });
-//Ejecuta la opcion de ordenamienti//
+buttonSearch.addEventListener("click", () => {
+  root.innerHTML = "";
+  const searchFilter = filterAll("name", parameterUser.value, characters);
+  searchFilter.forEach((oneCharacter) =>
+root.appendChild(generadorHTML(oneCharacter))
+);
+});
+
+//Ejecuta la opcion de ordenamiento//
 sortA.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(true, characters);
+  const sorted = sortAll(true,characters);
   sorted.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
 sortZ.addEventListener("click", () => {
   root.innerHTML = "";
-  const sorted = sortAll(false, characters);
+  const sorted = sortAll(false,characters);
   sorted.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );

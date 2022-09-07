@@ -30,7 +30,7 @@ describe("Prueba unitaria de filtro", () => {
     expect(typeof filterAll).toBe("function");
   });
 
-  it("Retornar el arreglo de los personajes especificados", () => {
+   it("Retornar el arreglo de los personajes especificados", () => {
     expect(filterAll("status", "Dead", people)).toEqual(peopleDead);
   });
 });
