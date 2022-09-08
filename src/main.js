@@ -13,7 +13,6 @@ const Logo = document.getElementById("Logo");
 const buttonSearch = document.getElementById("buttonSearch");
 
 const parameterUser = document.getElementById("searchCharacter")
-console.log(parameterUser.value)
 
 const root = document.getElementById("root");
 root.classList = "characterStyle";
