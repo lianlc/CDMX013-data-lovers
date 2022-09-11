@@ -1,5 +1,5 @@
-import allData from "./src/data/rickandmorty/rickandmorty.js";
-import { filterAll, filterDead, filterAlive, sortAll } from "./src/data.js";
+import allData from "./data/rickandmorty/rickandmorty.js";
+import { filterAll, filterDead, filterAlive, sortAll, search } from "./data.js";
 
 const All = document.getElementById("All");
 const Alive = document.getElementById("Alive");
@@ -10,7 +10,7 @@ const Unknown = document.getElementById("Unknown");
 const sortA = document.getElementById("sortA");
 const sortZ = document.getElementById("sortZ");
 const Logo = document.getElementById("Logo");
-const buttonSearch = document.getElementById("buttonSearch");
+//const buttonSearch = document.getElementById("buttonSearch");
 
 const parameterUser = document.getElementById("searchCharacter");
 
@@ -82,9 +82,9 @@ Unknown.addEventListener("click", () => {
     root.appendChild(generadorHTML(oneCharacter))
   );
 });
-buttonSearch.addEventListener("click", () => {
+parameterUser.addEventListener("change", () => {
   root.innerHTML = "";
-  const searchFilter = filterAll("name", parameterUser.value, characters);
+  const searchFilter = search(parameterUser.value, characters);
   searchFilter.forEach((oneCharacter) =>
     root.appendChild(generadorHTML(oneCharacter))
   );

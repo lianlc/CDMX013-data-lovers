@@ -34,7 +34,7 @@ h1 {
 }
 /*Estilo del main*/
 input {
-  background: transparent;
+  background: black;
   border-radius: 15px;
   box-shadow: 0 0 5px rgb(12, 189, 36);
   border: transparent;
@@ -42,13 +42,13 @@ input {
   height: 30px;
   width: 280px;
   color: #65a351;
-  padding-left:10px;
+  padding-left: 10px;
 }
 #searchSpace {
   position: fixed;
   right: 50px;
   top: 20px;
- }
+}
 #buttonSearch {
   background: transparent;
   border-radius: 10px;
